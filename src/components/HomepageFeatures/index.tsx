@@ -1,69 +1,62 @@
-import type {ReactNode} from 'react';
-import clsx from 'clsx';
-import Heading from '@theme/Heading';
+import React from 'react';
+import { BookOpen, Users, Award, TrendingUp } from 'lucide-react';
 import styles from './styles.module.css';
 
-type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: ReactNode;
-};
-
-const FeatureList: FeatureItem[] = [
+const features = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    icon: BookOpen,
+    title: 'Interactive Learning',
+    description: 'Hands-on coding exercises and real-world projects that reinforce your learning.',
+    gradientClass: styles.featureGradientBlue,
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    icon: Users,
+    title: 'Expert Community',
+    description: 'Connect with industry professionals and fellow learners in our vibrant community.',
+    gradientClass: styles.featureGradientPurple,
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    icon: Award,
+    title: 'Industry Recognition',
+    description: 'Earn certificates recognized by top tech companies and boost your career.',
+    gradientClass: styles.featureGradientGreen,
+  },
+  {
+    icon: TrendingUp,
+    title: 'Career Growth',
+    description: 'Track your progress and see measurable improvements in your technical skills.',
+    gradientClass: styles.featureGradientOrange,
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+export default function HomepageFeatures() {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-
-export default function HomepageFeatures(): ReactNode {
-  return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
-          ))}
+    <section className={styles.featuresSection} id="features-section">
+      <div className={styles.container}>
+        <div className={styles.header}>
+          <h2 className={styles.title}>
+            Why Choose LearnHub?
+          </h2>
+          <p className={styles.subtitle}>
+            Experience a new way of learning with our innovative platform designed for modern developers
+          </p>
+        </div>
+        <div className={styles.featuresGrid}>
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            return (
+              <div
+                key={index}
+                className={styles.featureCard}
+              >
+                <div className={`${styles.featureIconWrapper} ${feature.gradientClass}`}>
+                  <Icon className={styles.featureIcon} />
+                </div>
+                <h3 className={styles.featureTitle}>{feature.title}</h3>
+                <p className={styles.featureDescription}>{feature.description}</p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
