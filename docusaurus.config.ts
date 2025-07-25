@@ -24,7 +24,6 @@ const config: Config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'souvikpramanikgit', // Usually your GitHub org/user name.
   projectName: 'check', // Usually your repo name.
-  deployementBranch: 'gh-pages',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   markdown: {
