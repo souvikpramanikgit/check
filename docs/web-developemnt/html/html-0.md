@@ -1,114 +1,113 @@
 ---
-id: introduction-to-javascript
+id: introduction-to-html
 sidebar_position: 1
-title: Introduction to JavaScript
-sidebar_label: JavaScript Introduction
+title: Introduction to Html
+sidebar_label: Html Introduction
 ---
 
-Hey, everyone! In this guide, we'll take a journey into **JavaScript**, one of the most popular programming languages used for web development. JavaScript allows you to create interactive, dynamic, and feature-rich web applications. Let's dive into the basics!
+Hey, everyone!  In this guide, we’re going to explore **HTML (HyperText Markup Language)** – the foundational language of the web. HTML is the starting point for building any website or web application. It defines the **structure and content** of web pages. Let’s jump into the basics!
 
+---
 
-## 1. What is JavaScript?
+## 1. What is HTML?
 
-JavaScript, often abbreviated as **JS**, is a high-level, dynamic, and versatile programming language used primarily for web development. It allows developers to create interactive web pages, handle user events, and manipulate the Document Object Model (DOM).
+**HTML** stands for **HyperText Markup Language**. It is not a programming language but a **markup language** used to define the **structure of web pages** using elements and tags.
 
-### Key Features of JavaScript:
+### Key Features of HTML:
 
-- **Client-side scripting**: Runs directly in the browser, enabling dynamic content.
-- **Interactivity**: Handles user interactions, such as clicks, form submissions, and animations.
-- **Cross-platform**: Compatible with all major web browsers.
-- **Event-driven**: Reacts to user inputs and events like clicks, hovers, or keypresses.
+- **Structural Language**: It organizes content on a webpage using elements like headings, paragraphs, lists, and more.
+- **Semantics**: HTML5 introduced semantic elements like `<header>`, `<section>`, and `<footer>` that define the meaning of content.
+- **Media Integration**: Easily embeds images, videos, audio, and more.
+- **Linking Content**: Connects multiple web pages using hyperlinks.
 
 :::tip Fun Fact
-JavaScript was created in just **10 days** by Brendan Eich in 1995, and despite its rushed creation, it has grown to become the most widely-used language on the web!
+HTML was created by **Tim Berners-Lee** in 1991, and it laid the foundation for the modern web!
 :::
 
+---
 
-## 2. How Does JavaScript Work?
+## 2. How Does HTML Work?
 
-JavaScript runs in the web browser. When a web page loads, the browser's JavaScript engine interprets and executes the script to make the page interactive.
+When a user accesses a web page, the browser fetches the HTML file and renders it as a visual page. The HTML provides a **blueprint** for the content structure.
 
-### JavaScript Workflow
+### HTML Workflow
 
 ```mermaid
 graph LR
-  A[User Requests Web Page] -->|HTML, CSS, JS Sent| B[Browser Receives Files]
-  B -->|JS Engine Executes Script| C[Interactive Web Page]
-  C -->|User Interacts| D[JavaScript Handles Event]
-  D -->|Manipulates| E[DOM Updates]
+  A[User Requests Web Page] --> B[Server Sends HTML]
+  B --> C[Browser Parses HTML]
+  C --> D[Web Page Rendered]
 ```
 
+---
 
-## 3. JavaScript in Action: Example
-Here’s an example of how JavaScript can enhance a web page by responding to user input and dynamically updating the content.
+## 3. HTML in Action: Example
 
+Let’s look at a basic HTML document that displays a heading and a paragraph.
 
 ```html
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple JS Example</title>
+    <title>My First HTML Page</title>
   </head>
   <body>
-    <h1 id="greeting">Welcome!</h1>
-    <button onclick="changeGreeting()">Click Me</button>
-
-    <script>
-      function changeGreeting() {
-        document.getElementById("greeting").innerText = "Hello, JavaScript!";
-      }
-    </script>
+    <h1>Hello, world!</h1>
+    <p>This is a simple HTML page.</p>
   </body>
 </html>
 ```
-What happens here?
-HTML: Provides the structure (a heading and a button).
-JavaScript: Adds interactivity. When the button is clicked, the heading's text is changed to "Hello, JavaScript!".
 
+### What’s happening here?
+- **`<!DOCTYPE html>`**: Declares the document type (HTML5).
+- **`<html>`**: Root element.
+- **`<head>`**: Contains metadata and title.
+- **`<body>`**: Contains the visible content like text, images, links, etc.
 
-## 4. Where is JavaScript Used?
-JavaScript is everywhere! From simple web pages to complex applications, here are some areas where it's commonly used:
+---
 
-4.1. Front-End Web Development
-JavaScript brings static HTML pages to life by enabling interaction. Popular JavaScript frameworks like React, Vue, and Angular have revolutionized the way we build modern web applications.
+## 4. Where is HTML Used?
 
-4.2. Back-End Web Development
-JavaScript is not limited to the browser. With Node.js, you can run JavaScript on servers, enabling you to build full-stack web applications using a single language!
+HTML is everywhere on the web. Every website you visit uses HTML in some form.
 
-4.3. Mobile and Desktop Apps
-Frameworks like React Native (for mobile) and Electron (for desktop) allow developers to build apps for multiple platforms using JavaScript.
+### 4.1. Web Pages
+HTML forms the backbone of any static or dynamic webpage.
 
-4.4. Game Development
-Using libraries like Phaser and Three.js, JavaScript can even be used to create 2D and 3D games that run directly in the browser.
+### 4.2. Web Applications
+Combined with CSS and JavaScript, HTML powers modern web apps.
 
-## 5. Adding JavaScript to Your Web Page
+### 4.3. Emails
+Most email templates use HTML to provide formatted, styled messages.
 
-To include JavaScript in a web page, you can embed it directly within the HTML using the  tag.
+### 4.4. Documentation
+HTML is used to create online documentation and user manuals.
 
-### 5.1. Inline JavaScript
-You can add JavaScript code directly inside your HTML:
+---
 
-```html
-<script>
-  console.log("Hello, world!");
-</script>
-```
+## 5. Writing HTML Code
 
-### 5.2. External JavaScript
-For larger projects, it's better to keep your JavaScript in a separate file:
-```html
-<script src="main.js"></script>
-```
+HTML uses **elements** defined by tags such as `<h1>`, `<p>`, `<div>`, etc. Tags often come in pairs: opening (`<p>`) and closing (`</p>`).
 
-### 5.3. Best Practice
-
-- **Separation of Concerns**: Keep your HTML, CSS, and JavaScript separate for better organization.
-- **Asynchronous Loading**: Use the `defer` attribute to load scripts asynchronously without blocking the page rendering.
+### 5.1. Common HTML Elements
 
 ```html
-<script src="main.js" defer></script>
+<h1>This is a heading</h1>
+<p>This is a paragraph.</p>
+<a href="https://example.com">This is a link</a>
+<img src="image.jpg" alt="A sample image" />
 ```
+
+### 5.2. Best Practices
+
+- Use semantic tags for clarity and accessibility.
+- Always close your tags properly.
+- Use indentation to enhance readability.
+- Add `alt` attributes for images to support screen readers.
+
+---
 
 ## 6. Conclusion
 
-JavaScript is a powerful language that drives the interactivity of the web. By learning JavaScript, you can create dynamic web applications, interactive games, and much more. Stay tuned for more JavaScript guides and tutorials!
+HTML is the foundation of all web content. Whether you're building a personal blog or a powerful web app, mastering HTML is the first step. Stick around as we move forward into CSS and JavaScript to bring your pages to life!
+
+---

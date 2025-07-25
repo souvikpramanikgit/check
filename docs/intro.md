@@ -99,27 +99,6 @@ Web development is the process of creating and maintaining websites and web appl
 </TabItem> 
 </Tabs>
 
-```mermaid
-    graph TD
-    A["Web Developer"] --> B["HTML"]
-    A --> C["CSS"]
-    A --> D["JavaScript"]
-    D --> E["Frameworks"]
-    E --> F["React"]
-    E --> G["Vue"]
-    E --> H["Angular"]
-    D --> I["Version Control (Git)"]
-    D --> J["Package Managers (npm/yarn)"]
-    D --> K["APIs (REST/GraphQL)"]
-    D --> L["Build Tools (Webpack/Vite)"]
-    D --> M["Testing"]
-    M --> N["Unit Testing"]
-    M --> O["Integration Testing"]
-    D --> P["Deployment"]
-    P --> Q["Netlify"]
-    P --> R["Vercel"]
-    P --> S["AWS"]
-```
 ## Generative Ai
 
 Generative AI refers to algorithms and models that create new content such as text, images, or music by learning patterns from existing data. Popular techniques include GANs, VAEs, and transformer-based large language models for creative and practical applications.

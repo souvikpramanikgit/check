@@ -1,9 +1,8 @@
 {
-    "label": "Ai-Fundamentals",
-    "position": 1,
-    "link": {
-      "type": "generated-index",
-      "description": "5 minutes to learn the most important Web Development concepts."
-    }
+  "label": "Ai Fundamentals",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Fundamentals of Generative AI."
   }
-  
+}

@@ -172,7 +172,7 @@ function binarySearch(arr, target) {
         </div>
       </header>
       <HomepageFeatures />
-      {/* Popular Courses Section (replaces New Cards Section) */}
+      {/* Popular Courses Section */}
       <section className={styles.coursesSection} id="courses-section">
         <div className={styles.coursesContainer}>
           <div className={styles.coursesHeader}>
